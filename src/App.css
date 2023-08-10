@@ -1,6 +1,77 @@
+:root {
+  --primary: rgb(15, 12, 29);
+  --secondary: rgb(180, 27, 27);
+}
+
 #root {
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
   margin-top: 200px;
+}
+
+button {
+  outline: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 100ms ease-in-out;
+}
+
+button:hover {
+  opacity: .8;
+
+}
+
+.wrapper {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.display {
+  height: 50px;
+  text-align: right;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  background-color: var(--primary)
+}
+
+.display span {
+  font-size: 14px;
+  margin-right: 10px;
+  opacity: .7;
+}
+
+.controls {
+  height: 40px;
+  display: flex;
+}
+
+.controls button {
+  flex: 1 1 33.333%;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  height: 100%;
+  max-width: 33.333%;
+  background-color: var(--secondary)
+}
+
+.digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digits button {
+  flex: 1 1 33.333%;
+  max-width: 33.333%;
+  height: 60px;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
 }
