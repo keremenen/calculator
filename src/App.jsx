@@ -24,6 +24,16 @@ function App() {
     }
   }
 
+  const handleDelete = () => {
+    const value = calc.slice(0, -1)
+    setCalc(value)
+
+  }
+
+  const handleShowSum = () => {
+    setCalc(restult)
+  }
+
   return (
     <div className='App'>
       <div className='wrapper'>
@@ -35,7 +45,7 @@ function App() {
           <button onClick={() => handleClick('*')}>*</button>
           <button onClick={() => handleClick('-')}>-</button>
           <button onClick={() => handleClick('+')}>+</button>
-          <button>DEL</button>
+          <button onClick={handleDelete}>DEL</button>
         </div>
         <div className='digits'>
           <button onClick={() => handleClick(1)}>1</button>
@@ -49,7 +59,7 @@ function App() {
           <button onClick={() => handleClick(9)}>9</button>
           <button onClick={() => handleClick(0)}>0</button>
           <button onClick={() => handleClick('.')}>.</button>
-          <button>=</button>
+          <button onClick={handleShowSum}>=</button>
         </div>
       </div>
     </div>
