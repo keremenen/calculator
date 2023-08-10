@@ -15,21 +15,19 @@ button {
   appearance: none;
   border: none;
   cursor: pointer;
-  transition: opacity 100ms ease-in-out;
 }
 
 button:hover {
-  opacity: .8;
-
+  border: 1px solid #ffffff41;
 }
 
 .wrapper {
   max-width: 400px;
   width: 100%;
-  border-radius: 25px;
+  border-radius: 10px;
   overflow: hidden;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: var(--primary);
 }
 
 .display {
