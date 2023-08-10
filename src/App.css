@@ -1,42 +1,75 @@
+:root {
+  --primary: rgb(15, 12, 29);
+  --secondary: rgb(180, 27, 27);
+}
+
 #root {
-  max-width: 1280px;
+  max-width: 500px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  margin-top: 200px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+button {
+  outline: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  border: 1px solid #ffffff41;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.wrapper {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: var(--primary);
 }
 
-.card {
-  padding: 2em;
+.display {
+  height: 50px;
+  text-align: right;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  background-color: var(--primary)
 }
 
-.read-the-docs {
-  color: #888;
+.display span {
+  font-size: 14px;
+  margin-right: 10px;
+  opacity: .7;
+}
+
+.controls {
+  height: 40px;
+  display: flex;
+}
+
+.controls button {
+  flex: 1 1 33.333%;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  height: 100%;
+  max-width: 33.333%;
+  background-color: var(--secondary)
+}
+
+.digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digits button {
+  flex: 1 1 33.333%;
+  max-width: 33.333%;
+  height: 60px;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
 }
