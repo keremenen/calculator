@@ -1,29 +1,34 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
+
 
 function App() {
 
   const [calc, setCalc] = useState('')
   const [restult, setResult] = useState('')
 
-  const controls = ['/', '*', '-', '+']
+  const controls = ['/', '*', '-', '+', '-']
+
+
 
   const handleClick = value => {
     if (
       (controls.includes(value) && calc === '') ||
       (controls.includes(value) && controls.includes(calc.slice(-1)))
     ) return
-    setCalc(prevState => {
-      return prevState + value
-    })
-  }
 
+    setCalc(calc + value)
+
+    if (!controls.includes(value)) {
+      setResult(eval(calc + value).toString())
+    }
+  }
 
   return (
     <div className='App'>
       <div className='wrapper'>
         <div className='display'>
-          <span>(0)</span>{calc}
+          <span>({restult})</span>{calc}
         </div>
         <div className='controls'>
           <button onClick={() => handleClick('/')}>/</button>
